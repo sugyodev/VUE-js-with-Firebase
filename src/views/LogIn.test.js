@@ -2,7 +2,8 @@ import { mount } from '@vue/test-utils'
 import { test, expect } from 'vitest'
 import LogIn  from './LogIn.vue'
 
-test('title should be VuFire', () => {
+test('button login should be rendered', () => {
     const wrapper = mount(LogIn)
-    expect(wrapper.text()).toContain('VuFire')
+    const text = wrapper.find('[data-vi="login"]').text();
+    expect(text).toBe('Login');
 })

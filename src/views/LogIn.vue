@@ -1,7 +1,7 @@
 <template>
   <main>
-    <h1>VuFire</h1>
     <section>
+      <button data-vi="login">Login</button>
     </section>
   </main>
 </template>

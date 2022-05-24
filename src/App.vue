@@ -3,6 +3,7 @@ import LogIn from './views/LogIn.vue';
 </script>
 
 <template>
+  <h1 data-cy="title">VuFire</h1>
   <LogIn/>
 </template>
 
