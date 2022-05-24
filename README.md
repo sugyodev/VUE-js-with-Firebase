@@ -1,4 +1,5 @@
 ![unitest](https://github.com/gshohat/vufire/actions/workflows/unit-tests.yml/badge.svg)
+![e2e tests](https://github.com/gshohat/vufire/actions/workflows/cypress-tests.yml/badge.svg)
 
 # Vue 3 + Vite
 
