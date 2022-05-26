@@ -10,7 +10,7 @@
       </el-form-item>
       <el-form-item>
         <el-button type="primary" @click="onLogin" data-vi="login">Login</el-button>
-        <el-button type="primary" @click="onSignup"><slot><span data-vi="signup">Signup</span></slot></el-button>
+        <el-button type="primary" @click="onSignup"><span data-vi="signup">Signup</span></el-button>
       </el-form-item>
     </el-form>
   </main>
