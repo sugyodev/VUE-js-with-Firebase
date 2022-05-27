@@ -1,12 +1,10 @@
 import { mount } from '@vue/test-utils'
-import { describe, test, beforeAll, expect } from 'vitest'
+import { describe, test, beforeAll, expect, vi } from 'vitest'
 import LogIn  from './LogIn.vue'
 import ElementPlus from 'element-plus'
 import { createTestingPinia } from '@pinia/testing'
-import { useStore } from '@/stores/main/main'
 
 let wrapper = null
-let main = null
 
 describe('Login', () => {
   beforeAll(() => {
@@ -17,7 +15,6 @@ describe('Login', () => {
         })],
       }
     })
-    main = useStore()
   })
 
   test('button login should be rendered', () => {
@@ -32,11 +29,11 @@ describe('Login', () => {
     expect(input.element.value).toBe(email)
   })
 
-
-  test('button signup should fire "Signup" event', async () => {
+  test('click button signup should invoke "onSignup" method ', async () => {
+    const onSignUpSpy = vi.spyOn(wrapper.vm, 'onSignUp')
     const email = 'gilad.shohat@gmail.com'
     const password = '12345'
-    const form = {email, password}
+    const form = { email, password }
 
     const emailInput = wrapper.find('[data-vi="email"] input')
     const passwordInput = wrapper.find('[data-vi="password"] input')
@@ -46,9 +43,8 @@ describe('Login', () => {
     const signupButton = wrapper.find('[data-vi="signup"]')
     await signupButton.trigger('click')
 
-    expect(main.setUser).toHaveBeenCalledTimes(1)
+    expect(onSignUpSpy).toHaveBeenCalledTimes(1)
   })
-
 })
 
 
