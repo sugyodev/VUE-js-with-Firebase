@@ -1,6 +1,6 @@
 <template>
   <main>
-    <el-form class="auth">
+    <el-form>
       <el-form-item label="email" data-vi="email">
         <el-input v-model="form.email"/>
       </el-form-item>
@@ -18,16 +18,19 @@
 
 <script setup>
 import { reactive } from 'vue';
+import { useStore } from '@/stores/main/main'
 
 const form = reactive({
   email: '',
   password: '',
 })
 
-const emit = defineEmits()
+
+
+const store = useStore()
 
 const onSignup = () => {
-  emit('signup', form)
+  store.setUser(form.email)
 }
 
 const onLogin = () => {
@@ -37,9 +40,5 @@ const onLogin = () => {
 </script>
 
 <style scoped>
-
-.auth {
-
-}
 
 </style>
