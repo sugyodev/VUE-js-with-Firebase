@@ -3,8 +3,10 @@ import LogIn from './components/login/LogIn.vue'
 </script>
 
 <template>
-  <h1 data-cy="title">VuFire</h1>
-  <LogIn/>
+    <h1 data-cy="title">VuFire</h1>
+    <div class="login-form">
+      <LogIn/>
+    </div>
 </template>
 
 <style>
@@ -16,4 +18,10 @@ import LogIn from './components/login/LogIn.vue'
   color: #2c3e50;
   margin-top: 60px;
 }
+
+.login-form {
+  display: flex;
+  justify-content: center;
+}
+
 </style>
