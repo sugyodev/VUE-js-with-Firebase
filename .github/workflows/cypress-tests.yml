@@ -3,12 +3,12 @@ name: Cypress Tests
 on: [push]
 
 env:
-  API_KEY: ${{ secrets.API_KEY }}
-  AUTH_DOMAIN: ${{ secrets.AUTH_DOMAIN }}
-  STORAGE_BUCKET: ${{ secrets.STORAGE_BUCKET }}
-  PROJECT_ID: ${{ secrets.PROJECT_ID }}
-  MESSAGING_SENDER_ID: ${{ secrets.MESSAGING_SENDER_ID }}
-  APP_ID: ${{ secrets.APP_ID }}
+  CYPRESS_API_KEY: ${{ secrets.API_KEY }}
+  CYPRESS_AUTH_DOMAIN: ${{ secrets.AUTH_DOMAIN }}
+  CYPRESS_STORAGE_BUCKET: ${{ secrets.STORAGE_BUCKET }}
+  CYPRESS_PROJECT_ID: ${{ secrets.PROJECT_ID }}
+  CYPRESS_MESSAGING_SENDER_ID: ${{ secrets.MESSAGING_SENDER_ID }}
+  CYPRESS_APP_ID: ${{ secrets.APP_ID }}
 
 jobs:
   cypress-run:
