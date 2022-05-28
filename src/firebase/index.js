@@ -1,15 +1,7 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 
-let firebaseConfig = null
-
-console.log('import.meta.env', import.meta.env)
-console.log('-----------------')
-console.log('-----------------')
-console.log('-----------------')
-console.log('-----------------')
-console.log('-----------------')
-console.log('-----------------')
+let firebaseConfig
 
 if (typeof Cypress === 'object') {
     firebaseConfig = {
