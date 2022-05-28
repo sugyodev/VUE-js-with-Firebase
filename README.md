@@ -1,10 +1,32 @@
 ![unitest](https://github.com/gshohat/vufire/actions/workflows/unit-tests.yml/badge.svg)
 ![e2e tests](https://github.com/gshohat/vufire/actions/workflows/cypress-tests.yml/badge.svg)
 
-# Vue 3 + Vite
+# VuFire
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Vue 3 app that signups a new firebase user.
 
-## Recommended IDE Setup
+Login will be developed in next release.
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+![app](https://raw.githubusercontent.com/gshohat/vufire/master/assets/VuFire.gif)
+
+## Project setup
+create '.env.local' file in root for firebase config:
+```
+VITE_API_KEY=
+VITE_AUTH_DOMAIN=
+VITE_PROJECT_ID=
+VITE_STORAGE_BUCKET=
+VITE_MESSAGING_SENDER_ID=
+VITE_APP_ID=
+
+```
+
+Run
+```
+npm install
+npm run serve 
+```
+
+
+## contact
+contact@giladshohat.com
