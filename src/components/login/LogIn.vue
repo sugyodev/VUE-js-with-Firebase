@@ -10,7 +10,7 @@
       </el-form-item>
       <div class="action-buttons">
         <el-form-item>
-          <el-button type="primary" @click="onLogin" data-vi="login">Login</el-button>
+          <el-button type="primary" @click="onLogin()"><span data-vi="login">Login</span></el-button>
           <el-button type="primary" @click="onSignUp()"><span data-vi="signup">Signup</span></el-button>
         </el-form-item>
       </div>
