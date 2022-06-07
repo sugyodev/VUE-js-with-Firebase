@@ -1,7 +1,9 @@
 {
   "name": "vufire",
-  "private": true,
-  "version": "0.0.0",
+  "version": "0.1.1",
+  "author": "contact@giladshohat.com",
+  "homepage": "https://github.com/gshohat/vufire#readme",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -31,6 +33,13 @@
     "cypress",
     "vue",
     "vuejs",
-    "vite"
+    "vite",
+    "workflow",
+    "action",
+    "firebase",
+    "signup",
+    "login",
+    "vue3",
+    "vue 3"
   ]
 }

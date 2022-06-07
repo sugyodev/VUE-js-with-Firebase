@@ -29,8 +29,6 @@ const user = reactive({
   password: '',
 })
 
-
-
 const store = useAuthStore()
 
 const onSignUp = () => {
@@ -38,7 +36,7 @@ const onSignUp = () => {
 }
 
 const onLogin = () => {
-
+  store.login(user)
 }
 
 </script>
