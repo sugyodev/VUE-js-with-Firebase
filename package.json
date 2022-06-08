@@ -12,7 +12,7 @@
     "test": "vitest"
   },
   "dependencies": {
-    "element-plus": "^2.2.2",
+    "element-plus": "^2.2.4",
     "firebase": "^9.8.1",
     "pinia": "^2.0.14",
     "vue": "^3.2.25"

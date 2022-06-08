@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
-import { auth } from '@/firebase/index'
-import { createUserWithEmailAndPassword } from 'firebase/auth'
+import { auth } from '../../firebase/index'
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth'
 
 export const useAuthStore = defineStore('main', {
     state: () => ({
@@ -23,12 +23,13 @@ export const useAuthStore = defineStore('main', {
         async login(user) {
             const { email, password } = user
             try {
-                const userCredentials = await createUserWithEmailAndPassword(auth, email, password)// todo change to login func
-                const displayName = userCredentials //todo display in LoggedIn page same as signup
+                const userCredentials = await signInWithEmailAndPassword(auth, email, password)
+                const displayName = userCredentials.user.providerData[0].displayName //todo display in LoggedIn page same as signup
                 this.username = displayName
+                //todo navigate to next page
                 return { success: true }
             } catch(e) {
-                console.log(e) // todo -> toaster
+                throw e
                 return { success: false }
             }
         }

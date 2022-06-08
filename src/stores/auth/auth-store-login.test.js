@@ -2,11 +2,12 @@ import { describe, test, beforeAll, afterEach, expect, vi } from 'vitest'
 import { setActivePinia, createPinia } from 'pinia'
 import { useAuthStore } from './auth-store'
 
-describe('auth store', () => {
+describe('auth store2', () => {
   let store
   let email
   let password
   let user
+
   beforeAll(() => {
     setActivePinia(createPinia())
     store = useAuthStore()
@@ -15,10 +16,15 @@ describe('auth store', () => {
     user = { email, password }
   })
 
-  test('signup should create a firebase user', async () => {
+  test('login should sign in with credentials', async () => {
     vi.mock('firebase/auth', () => {
       return {
         createUserWithEmailAndPassword: vi.fn(() => ({
+          user: {
+            providerData: [{ displayName: 'gilad.shohat@gmail.com' }],
+          }
+        })),
+        signInWithEmailAndPassword: vi.fn(() => ({
           user: {
             providerData: [{ displayName: 'gilad.shohat@gmail.com' }],
           }
@@ -27,29 +33,9 @@ describe('auth store', () => {
       }
     })
 
-    const authResponse = await store.signUp(user)  //todo
+    const authResponse = await store.login(user)
     expect(authResponse).toEqual({
       success: true
-    })
-
-    //todo remove
-    //await store.signUp(user)
-    //expect(store.username).toEqual(email)
-  })
-
-  test('signup failed to create a firebase user', async () => {
-    vi.mock('firebase/auth', () => {
-      return {
-        createUserWithEmailAndPassword: vi.fn(() => {
-          throw new Error('Value must be a number')
-        }),
-          getAuth: vi.fn(() => ({})),
-        }
-  })
-
-    const authResponse = await store.signUp(user)
-    expect(authResponse).toEqual({
-      success: false
     })
   })
 
