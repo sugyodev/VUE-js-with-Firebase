@@ -3,9 +3,8 @@
 
 # VuFire
 
-Vue 3 app that signup a new firebase user.
+Vue 3 app that signup & login a new firebase user.
 
-Login will be developed in next release.
 
 ![app](https://raw.githubusercontent.com/gshohat/vufire/master/assets/VuFire.gif)
 
