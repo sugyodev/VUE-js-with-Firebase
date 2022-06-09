@@ -23,7 +23,7 @@ VITE_APP_ID=
 Run
 ```
 npm install
-npm run serve 
+npm run dev
 ```
 
 
