@@ -1,14 +1,8 @@
 <template>
-
+  <h1 data-cy="logged-in-title">Logged in</h1>
 </template>
 
 <script setup>
-  // import { useStore } from '@/stores/main'
-  import {storeToRefs} from 'pinia'
-
-  // const store = useStore()
-  // const { user } = storeToRefs(store) todo remove?
-
 </script>
 
 <style scoped>

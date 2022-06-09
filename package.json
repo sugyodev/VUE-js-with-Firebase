@@ -1,6 +1,6 @@
 {
   "name": "vufire",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "contact@giladshohat.com",
   "homepage": "https://github.com/gshohat/vufire#readme",
   "license": "MIT",
@@ -15,7 +15,8 @@
     "element-plus": "^2.2.4",
     "firebase": "^9.8.1",
     "pinia": "^2.0.14",
-    "vue": "^3.2.25"
+    "vue": "^3.2.25",
+    "vue-router": "^4.0.15"
   },
   "devDependencies": {
     "@pinia/testing": "^0.0.12",

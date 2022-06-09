@@ -4,6 +4,6 @@ describe('example to-do app', () => {
     })
 
     it('app title should be VuFire', () => {
-        cy.get('[data-cy=title]').should('have.text', 'VuFire')
+        cy.get('[data-cy="title"]').should('have.text', 'VuFire')
     })
 })
